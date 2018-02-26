@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Product.aspx.cs" Inherits="Assignment.Product" %>
+﻿a<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Product.aspx.cs" Inherits="Assignment.Product" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
     Product
 </asp:Content>
@@ -28,5 +28,5 @@
     <button>ADD TO CART</button>
   </div>
 </div>
-
+    
 </asp:Content>
