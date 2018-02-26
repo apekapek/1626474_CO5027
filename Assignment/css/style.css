@@ -1,0 +1,453 @@
+﻿body{
+	font-size:100%;
+	font-family:"Times New Roman", Times, serif;
+	line-height:1.5;
+	text-align:left;
+	background-color:gray;
+	
+	
+}
+
+.body {
+	
+	margin:0 auto;
+	width:70%;
+	clear:both;
+}
+.mainContent{
+	
+	line-height:30px;
+	overflow:auto;
+	width:100%;
+
+	
+}
+
+.topheader img{
+	
+	height: 100px;
+	width: 100%;
+	margin:2% 0 -2.7% 0;
+
+}
+
+
+.mainFooter{
+	width:100%;
+	text-align:center;
+	background-color:rgba(0,255,255,0.5);
+	margin:2% 0;
+	clear: both;
+	padding: 0  ;
+
+}
+.valid{
+	border:0;
+	width:88px;
+	height:31px
+}
+h1{
+	color: black;
+	text-align:center;
+	font-size:50px;	
+}
+h2{
+	font-size:40px
+}
+@media only screen and ( max-width: 40em ) /* 640px */{
+	h1{
+	color: black;
+	text-align:justify;
+	font-size:32px;	
+	}
+	
+}
+
+/************************************************************************************
+Navigation 
+Massie, B. (2014). Responsive Dropdown Menu. CodePen. Retrieved from https://codepen.io/massiebn/pen/KrJvi
+*************************************************************************************/
+
+ul {
+    padding: 0;
+}
+ul, li {
+  	list-style: none;
+}
+a {
+  	font-family: "Times New Roman", Times, serif;
+  	text-decoration: none;
+}
+#nav {
+	width: 100%;
+	top: 25%;
+	left: 50%;
+	margin-left: -30em;
+	margin:2% 0 -1% 0;
+ }
+ 
+#nav > a {
+	display: none;
+}
+#nav li {
+  	position: relative;
+}
+#nav li a {
+	color: #fff;
+	display: block;
+}
+#nav li a:active {
+	background-color: white!important;
+}
+#nav span:after {
+  	width: 0;
+  	height: 0;
+  	border: 0.313em solid transparent; 
+	border-bottom: none;
+	border-top-color: #efa585;
+	content: '';
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	right: -0.313em; 
+}
+/* first level */
+#nav > ul {
+	height: 60px; 
+	background-color: #333;
+}
+#nav > ul > li {
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+#nav > ul > li > a {
+	height: 100%;
+	font-size: 1.5em; 
+	line-height: 2.5em; 
+	text-align: center;
+}
+#nav > ul > li:not( :last-child ) > a {
+	border-right: 1px solid white;
+}
+#nav > ul > li:hover > a,
+#nav > ul:not( :hover ) > li.active > a {
+	background-color: rgba(0,255,255,0.5);
+}
+/* second level */
+#nav li ul {
+	background-color: #333;
+	display: none;
+	position: absolute;
+	top: 100%;
+	z-index:1000;
+}
+#nav li:hover ul {
+	display: block;
+	left: 0;
+	right: 0;
+}
+#nav li:not( :first-child ):hover ul {
+	left: -1px;
+}
+#nav li ul a {
+	font-size: 1.25em; 
+	border-top: 1px solid white;
+	padding: 0.75em;
+}
+#nav li ul li a:hover,
+#nav li ul:not( :hover ) li.active a {
+	background-color: rgba(0,255,255,0.5);
+}
+@media only screen and ( max-width: 62.5em ) { /* 1000px */
+	#nav {
+		width: 100%;
+		position: static;
+		margin: 0;
+	}
+}
+@media only screen and ( max-width: 40em ) /* 640px */
+{
+		#nav {
+		position: relative;
+		top: auto;
+		left: auto;
+	}
+	#nav > a {
+		width: 3.125em;
+		height: 3.125em; 
+		text-align: left;
+		text-indent: -9999px;
+		background-color: #333;
+		position: relative;
+	}
+	#nav > a:before,
+	#nav > a:after {
+		position: absolute;
+		border: 2px solid white;
+		top: 35%;
+		left: 25%;
+		right: 25%;
+		content: '';
+	}
+	#nav > a:after {
+		top: 60%;
+	}
+	#nav:not( :target ) > a:first-of-type,
+	#nav:target > a:last-of-type {
+		display: block;
+	}
+	/* first level */
+	#nav > ul {
+		height: auto;
+		display: none;
+		position: absolute;
+		left: 0;
+		right: 0;
+		z-index:1000;
+	}
+	#nav:target > ul {
+		display: block;
+	}
+	#nav > ul > li {
+		width: 100%;
+		float: none;
+	}
+	#nav > ul > li > a {
+		height: auto;
+		text-align: left;
+		padding: 0 0.833em; 
+	}
+	#nav > ul > li:not( :last-child ) > a {
+		border-right: none;
+		border-bottom: 1px solid white;
+	}
+	/* second level */
+	#nav li ul {
+		position: static;
+		padding: 1.25em; 
+		padding-top: 0;
+	}
+}
+
+/************************************************************************************
+Default Page
+*************************************************************************************/
+
+#wrap {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+.columns_2 figure {
+    width: 49%;
+    margin-right: 1%;
+}
+
+    .columns_2 figure:nth-child(2) {
+        margin-right: 0;
+    }
+
+.columns_3 figure {
+    width: 32%;
+    margin-right: 1%;
+}
+
+    .columns_3 figure:nth-child(3) {
+        margin-right: 0;
+    }
+
+.columns_4 figure {
+    width: 24%;
+    margin-right: 1%;
+}
+
+    .columns_4 figure:nth-child(4) {
+        margin-right: 0;
+    }
+
+.columns_5 figure {
+    width: 19%;
+    margin-right: 1%;
+}
+
+    .columns_5 figure:nth-child(5) {
+        margin-right: 0;
+    }
+
+#columns figure:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#columns:hover figure:not(:hover) {
+    opacity: 0.4;
+}
+
+div#columns figure {
+    display: inline-block;
+    background: #FEFEFE;
+    border: 2px solid #FAFAFA;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    margin: 0 0px 15px;
+    -webkit-column-break-inside: avoid;
+    
+    padding: 15px;
+    padding-bottom: 5px;
+    background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+    opacity: 1;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+    div#columns figure img {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+        margin-bottom: 5px;
+    }
+
+    div#columns figure figcaption {
+        font-size: .9rem;
+        color: #444;
+        line-height: 1.5;
+        height: 60px;
+        font-weight: 600;
+        text-overflow: ellipsis;
+    }
+
+a.button {
+    padding: 10px;
+    background: salmon;
+    margin: 10px;
+    display: block;
+    text-align: center;
+    color: #fff;
+    transition: all 1s linear;
+    text-decoration: none;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    border-bottom: 3px solid #ff6536;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+    a.button:hover {
+        background: #ff6536;
+        border-bottom: 3px solid salmon;
+        color: #f1f2f3;
+    }
+
+@media screen and (max-width: 960px) {
+    #columns figure {
+        width: 24%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #columns figure {
+        width: 32%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #columns figure {
+        width: 49%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #columns figure {
+        width: 100%;
+    }
+}
+
+/************************************************************************************
+Product Page
+*************************************************************************************/
+
+body {
+    height: 100vh;
+    background: #70e1f5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.single-item {
+    text-align:center;
+    height:540px;
+    width:560px;
+    border: solid 6px #fff;
+    border-radius: 10px;
+    background: #f5f5f5;
+    box-shadow: 0 30px 20px -20px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+
+.left-set, .right-set {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.left-set {
+    float: left;
+    overflow: hidden;
+}
+img {
+    align-content:center;
+    height:300px;
+    width:300px;
+
+}
+
+.right-set {
+    float: right;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+ 
+.name
+    {
+        font-weight: bold;
+    }
+
+.name {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+
+
+.price {
+    padding: 1rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.description p {
+    font-size: 0.9rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+
+
+button {
+    width: 100%;
+    height: 2rem;
+    cursor: pointer;
+    background: none;
+    border: solid 2px #111;
+    border-radius: 4px;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    transition: all 0.4s ease;
+
+}
+
+    button:hover {
+        background: #70e1f5;
+    }

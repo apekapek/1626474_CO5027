@@ -1,72 +1,76 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Assignment.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Assignment.Site" %>
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 <head runat="server">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
 
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
-    </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<title>
+    <asp:ContentPlaceHolder ID="Title" runat="server"></asp:ContentPlaceHolder>
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">	
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="~/css/style.css" rel="stylesheet" type="text/css">
+
 
 </head>
-<body>
-    <form runat="server">
-        <asp:ScriptManager runat="server">
-            <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
-                <asp:ScriptReference Name="MsAjaxBundle" />
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="bootstrap" />
-                <asp:ScriptReference Name="respond" />
-                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
-                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
-                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
-                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
-                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
-                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
-                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
-            </Scripts>
-        </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
-        </div>
+<body class="body" runat="server">
 
-    </form>
+
+				
+		<header class="topheader">
+			<asp:ContentPlaceHolder ID="Banner" runat="server"></asp:ContentPlaceHolder>
+		</header>
+		 <nav id="nav">
+    <a href="#nav">Show navigation</a>
+    <a href="#" >Hide navigation</a>
+    <ul>
+        <li><a href="~/Default" runat="server">Home</a></li>
+        <li>
+          <a href="#"><span>Item</span></a>
+            <ul>
+                <li><a href="~/Default" runat="server">Item List</a></li>
+                <li><a href="~/Product" runat="server">Product Description</a></li>
+            </ul>
+        </li>
+        <li> <a href="character.html">About Us</a></li>
+        <li><a href="reference.html">Reference</a></li>
+    </ul>
+</nav>
+		
+						
+	<section id="mainContent">
+	
+		
+	
+						
+		<h1><asp:ContentPlaceHolder ID="Header" runat="server"></asp:ContentPlaceHolder></h1>
+	
+<div class="content">
+    <asp:ContentPlaceHolder ID="Content" runat="server"></asp:ContentPlaceHolder>
+</div>						
+						
+	
+						
+		
+		</section>
+
+	<footer class="mainFooter">
+		<p>Copyright &copy; 1626474/J39674</p>
+		
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+        		<img src="http://jigsaw.w3.org/css-validator/images/vcss"
+            	alt="Valid CSS!" class="valid" />
+			</a>
+	
+		
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+				<img src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+				alt="Valid CSS!" class="valid" />
+			</a>
+		
+	</footer>
 </body>
 </html>

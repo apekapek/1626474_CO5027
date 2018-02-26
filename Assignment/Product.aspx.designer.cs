@@ -11,7 +11,7 @@ namespace Assignment
 {
 
 
-    public partial class Default
+    public partial class Product
     {
     }
 }

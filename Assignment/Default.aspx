@@ -1,42 +1,59 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Assignment._Default" %>
-
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
-    </div>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Assignment.Default" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
+    Main Page
 </asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Banner" runat="server">
+    alum ada
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Header" runat="server">
+    List of Item
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="Content" runat="server">
+    <div id="wrap">
+	<div id="columns" class="columns_4">
+  <figure>
+    <img src="Image/Ballpoint%20pen%20Essentio%20Black%20Carbon%20gift%20box.jpg" />
+	<figcaption>Ballpoint pen Essentio Black Carbon gift box</figcaption>
+    <span class="price">$44</span>
+    <a class="button" href="#">Buy Now</a>
+	</figure>
+	
+	<figure>
+    <img src="Image/Ballpoint%20pen%20Essentio%20metal%20matt.jpg" />
+	<figcaption>Ballpoint pen Essentio metal matt</figcaption>
+    <span class="price">$44</span>
+    <a class="button" href="#">Buy Now</a>
+	</figure>
+	
+  <figure>
+     <img src="Image/Ballpoint%20pen%20Essentio%20metal%20shiny.jpg" />
+	<figcaption>Ballpoint pen Essentio metal shiny</figcaption>
+    <span class="price">$44</span>
+    <a class="button" href="#">Buy Now</a>
+	</figure>
+  
+	<figure>
+    <img src="Image/Ballpoint%20pen%20LOOM%20metallic%20grey.jpg" />
+	<figcaption>Ballpoint pen LOOM metallic grey</figcaption>
+    <span class="price">$44</span>
+    <a class="button" href="#">Buy Now</a>
+	</figure>
+	
+   <figure>
+    <img src="Image/Fountain%20pen%20Ondoro%20graphite%20black%20fine.jpg" />
+	<figcaption>Fountain pen Ondoro graphite black fine</figcaption>
+    <span class="price">$44</span>
+    <a class="button" href="#">Buy Now</a>
+	</figure>
+	
+   <figure>
+       <img src="Image/Fountain%20pen%20Ondoro%20smoked%20oak%20fine.jpg" />
+	<figcaption>Fountain pen Ondoro smoked oak fine</figcaption>
+     <span class="price">$44</span>
+     <a class="button" href="#">Buy Now</a>
+	</figure>
+  	
+</div>
+        </div>
+</asp:Content>
+
