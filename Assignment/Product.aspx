@@ -3,7 +3,8 @@
     Product
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Banner" runat="server">
-    alum ada
+      <img src="image/Logo.png" />
+    
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Header" runat="server">
     Item Description
