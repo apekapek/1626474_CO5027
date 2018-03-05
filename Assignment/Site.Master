@@ -21,7 +21,7 @@
 
 				
 		<header class="topheader">
-			<asp:ContentPlaceHolder ID="Banner" runat="server"></asp:ContentPlaceHolder>
+			<img src="image/Logo.png" />
 		</header>
 		 <nav id="nav">
     <a href="#nav">Show navigation</a>
@@ -35,8 +35,8 @@
                 <li><a href="~/Product" runat="server">Product Description</a></li>
             </ul>
         </li>
-        <li> <a href="character.html">About Us</a></li>
-        <li><a href="reference.html">Reference</a></li>
+        <li> <a href="ContactUs">Contact Us</a></li>
+        <li><a href="#">Reference</a></li>
     </ul>
 </nav>
 		
