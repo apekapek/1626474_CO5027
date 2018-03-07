@@ -13,7 +13,17 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <link href="~/css/style.css" rel="stylesheet" type="text/css">
 
-
+    <style>
+  #map {
+    height: 100%;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+</style>
+  
 </head>
 
 <body class="body" runat="server">
@@ -50,12 +60,12 @@
 	
 <div class="content">
     <asp:ContentPlaceHolder ID="Content" runat="server"></asp:ContentPlaceHolder>
-</div>						
-						
-	
-						
-		
+</div>
+        
+        
+        
 		</section>
+     <asp:ContentPlaceHolder ID="GoogleMap" runat="server"></asp:ContentPlaceHolder>
 
 	<footer class="mainFooter">
 		<p>Copyright &copy; 1626474/J39674</p>
@@ -72,5 +82,6 @@
 			</a>
 		
 	</footer>
+   
 </body>
 </html>
