@@ -22,7 +22,7 @@ namespace Assignment
 
             //create mail client and message with to and from address, and set message subject and body
             SmtpClient smtpClient = new SmtpClient();
-            MailMessage msg = new MailMessage("apek58agus@gmail.com", "apek58agus@gmail.com");
+            MailMessage msg = new MailMessage("apekassignment@gmail.com", "apekassignment@gmail.com");
             msg.Subject = txtSubject.Text;
             msg.Body = txtBody.Text;
 
@@ -32,7 +32,7 @@ namespace Assignment
             smtpClient.EnableSsl = true;
 
             //create credentials - e.g. username and password for the account
-            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("apek58agus@gmail.com", "lolmao101");
+            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("apekassignment@gmail.com", "lola1lola");
             smtpClient.Credentials = credentials;
 
             try
