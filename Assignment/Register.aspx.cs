@@ -19,15 +19,27 @@ namespace Assignment
         protected void btnReg_Click(object sender, EventArgs e)
         {
             var identityDbContext = new IdentityDbContext("IdentityConnectionString");
+            var roleStore = new RoleStore<IdentityRole>(identityDbContext);
+            var roleManager = new RoleManager<IdentityRole>(roleStore);
             var userStore = new UserStore<IdentityUser>(identityDbContext);
             var manager = new UserManager<IdentityUser>(userStore);
 
-            var user = new IdentityUser() { UserName = txtRegUserName.Text, Email = txtRegUserName.Text };
+
+            IdentityRole adminRole = new IdentityRole("Admin");
+            roleManager.Create(adminRole);
+            var user = new IdentityUser()
+            { UserName = txtRegUserName.Text,
+              Email = txtRegUserName.Text
+            };
             IdentityResult result = manager.Create(user, txtRegPassword.Text);
 
             if ( result.Succeeded)
             {
-
+                litRegisterError.Text = "Successfully registered.";
+                txtRegUserName.Text = "";
+                txtRegPassword.Text = "";
+                manager.AddToRole(user.Id, "Admin");
+                manager.Update(user);
             }
             else
             {
