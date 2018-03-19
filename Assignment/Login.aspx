@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Header" runat="server">
-    Login Page
+    Login Pages
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Content" runat="server">
 
