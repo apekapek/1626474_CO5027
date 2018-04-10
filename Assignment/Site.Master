@@ -36,6 +36,7 @@
             </ul>
         </li>
         <li> <a href="ContactUs">Contact Us</a></li>
+        <li><a href="~/Register" runat="server">Register</a></li>
         <li><a href="#">Reference</a></li>
     </ul>
 </nav>

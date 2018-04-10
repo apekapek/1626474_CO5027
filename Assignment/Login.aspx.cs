@@ -36,7 +36,7 @@ namespace Assignment
 
             }
         }
-
+        
         private void LogUserIn(UserManager<IdentityUser> usermanager, IdentityUser user)
         {
             var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;

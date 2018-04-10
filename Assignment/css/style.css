@@ -1,19 +1,14 @@
-﻿body{
-	font-size:100%;
-	font-family:"Times New Roman", Times, serif;
-	line-height:1.5;
-	text-align:left;
-	background-color:gray;
-	
-	
+﻿body {
+    font-size: 100%;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.5;
+    text-align: left;
+    background: white;
+    margin: 0 auto;
+    width: 70%;
+    clear: both;
 }
 
-.body {
-	
-	margin:0 auto;
-	width:70%;
-	clear:both;
-}
 .mainContent{
 	
 	line-height:30px;
@@ -370,11 +365,7 @@ a.button {
 Product Page
 *************************************************************************************/
 
-body {
-    height: 100vh;
-    background: #70e1f5;
-    font-family: 'Roboto', sans-serif;
-}
+
 
 .single-item {
     text-align:center;
