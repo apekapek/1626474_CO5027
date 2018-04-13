@@ -13,29 +13,30 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <header class="topheader">
-			<img src="image/casper-banner.jpg" alt="4">
-		</header>
-		 <nav id="nav">
-    <a href="#nav">Show navigation</a>
-    <a href="#" >Hide navigation</a>
-<ul>
-        <li><a href="~/Default" runat="server">Home</a></li>
-        <li>
-          <a href="#"><span>Item</span></a>
-            <ul>
-                <li><a href="~/Default" runat="server">Item List</a></li>
-                <li><a href="~/Product" runat="server">Product Description</a></li>
-            </ul>
-        </li>
-        <li> <a href="ContactUs">Contact Us</a></li>
-        <li><a href="~/Register" runat="server">Register</a></li>
-        <li><a href="#">Reference</a></li>
-    </ul>
-</nav>
+       <header class="clearfix">
+  <div class="container">
+    <div class="header-left">
+      <h1>Faber Castell</h1>
+    </div>
+    <div class="header-right">
+      <label for="open">
+					<span class="hidden-desktop"></span>
+				</label>
+      <input type="checkbox" name="" id="open">
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Inspiration</a>
+        <a href="#">Articles</a>
+        <a href="#">Works</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
 
         <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <asp:ContentPlaceHolder ID="Maincontain" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
