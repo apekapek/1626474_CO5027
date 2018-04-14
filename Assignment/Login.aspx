@@ -8,7 +8,7 @@
 
 
 
-    <form id="form1" runat="server">
+    
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
         <asp:Label ID="Label1" runat="server" Text="Username"></asp:Label>
         <asp:TextBox ID="txtLogUsername" runat="server"></asp:TextBox>
@@ -20,7 +20,7 @@
         <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" />
         <br />
         <asp:Literal ID="litLoginError" runat="server"></asp:Literal>
-    </form>
+    
 
 
 
