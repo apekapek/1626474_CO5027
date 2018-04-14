@@ -1,12 +1,13 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Assignment.admin.Site" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="Assignment.admin.Site" %>
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+        </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">	
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <link href="~/admin/css/style.css" rel="stylesheet" type="text/css">

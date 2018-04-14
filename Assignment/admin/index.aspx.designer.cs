@@ -10,7 +10,7 @@
 namespace Assignment.admin {
     
     
-    public partial class index1 {
+    public partial class index {
         
         /// <summary>
         /// FormView1 control.
@@ -22,6 +22,15 @@ namespace Assignment.admin {
         protected global::System.Web.UI.WebControls.FormView FormView1;
         
         /// <summary>
+        /// SqlDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource;
+        
+        /// <summary>
         /// GridView1 control.
         /// </summary>
         /// <remarks>
@@ -31,12 +40,12 @@ namespace Assignment.admin {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// SqlDataSource control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

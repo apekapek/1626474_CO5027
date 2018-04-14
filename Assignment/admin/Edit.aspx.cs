@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Assignment.admin
 {
-    public partial class Edit : System.Web.UI.Page
+    public partial class Edit1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,7 +19,16 @@ namespace Assignment.admin
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/admin/List.aspx");
+            Response.Redirect("~/admin/index.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            string productId = Request.QueryString["Id"];
+            string filename = productId + ".jpg";
+            string saveLocation = Server.MapPath("~/admin/ProductImages/" + filename);
+
+            imageFileUploadControl.SaveAs(saveLocation);
         }
     }
 }
