@@ -24,8 +24,8 @@ namespace Assignment
             var userStore = new UserStore<IdentityUser>(identityDbContext);
             var manager = new UserManager<IdentityUser>(userStore);
 
-            IdentityRole adminRole = new IdentityRole("Admin");
-            //IdentityRole adminRole = new IdentityRole("RegisteredUser");
+            //IdentityRole adminRole = new IdentityRole("Admin");
+            IdentityRole adminRole = new IdentityRole("RegisteredUser");
             roleManager.Create(adminRole);
             var user = new IdentityUser()
             { UserName = txtRegUserName.Text,

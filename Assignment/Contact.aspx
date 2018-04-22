@@ -1,37 +1,20 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="Assignment.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="Assignment.Contact" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Header" runat="server">
+    Contact Us
+            
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Content" runat="server">
-    <form id="form1" runat="server">
-        <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
-        <p>
-            <asp:Label ID="Label1" runat="server" Text="Enter Your Email"></asp:Label>
-            <asp:TextBox ID="EmailForUser" runat="server"></asp:TextBox>
-            <asp:RegularExpressionValidator ID="regValidEmail" runat="server" ErrorMessage="enter a valid email" ControlToValidate="EmailForUser" Display="None" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-            <asp:RequiredFieldValidator ID="reqEmails" runat="server" ControlToValidate="EmailForUser" Display="None" ErrorMessage="please fill in email"></asp:RequiredFieldValidator>
-        </p>
-        <p>
-            <asp:Label ID="lblSubject" runat="server" Text="Subject"></asp:Label>
-            <asp:TextBox ID="txtSubject" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="reqSubjectField" runat="server" ControlToValidate="txtSubject" ErrorMessage="Please enter Subject" Display="None"></asp:RequiredFieldValidator>
-        </p>
-        <p>
-            <asp:Label ID="lblBody" runat="server" Text="Body"></asp:Label>
-            <asp:TextBox ID="txtBody" runat="server" TextMode="MultiLine"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="reqBodyField" runat="server" ControlToValidate="txtBody" ErrorMessage="please fill in the blank" Display="None"></asp:RequiredFieldValidator>
-        </p>
-        <p>
-            <asp:Button ID="btnSendEmail" runat="server" Text="Send Email" OnClick="btnSendEmail_Click" />
-        </p>
-        <p>
-            <asp:Literal ID="litResult" runat="server"></asp:Literal>
-        </p>
-    </form>
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="GoogleMap" runat="server">
-     <div id="map">
+    <p>Fill in the form below and we'll get back to you within 24 hours.</p>
+            <p>Thank you in advance for your feedback.</p>
+    <div class="content2">
+			
+			    
+			
+			     <div class="CtnRight">
+			         
+      <div id="map">
     <script>
       var map;
       function initMap() {
@@ -70,5 +53,42 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3Jd9nrI76Iz0Nl3qA4sHLh4eF02sVTM8&callback=initMap"
     async defer></script>
     </div>
-</asp:Content>
+			</div>	
+			
+			
+		
+		<div class="CtnLeft">
+	
+					
+			     <h1>Faber Castell</h1>
+    <p>Please contact us</p>
+    <div class="det"><i class="fa fa-map-marker"></i> Roof Top, Plaza Abdul Razak,
 
+Jalan Laksamana Abdul Razak, Bandar Seri Begawan
+
+Negara Brunei Darussalam</div>
+    <div class="det"><i class="fa fa-phone"></i> 0011223344</div>
+ <asp:Label ID="lblName" runat="server" Text="Name:" class="style-label" AssociatedControlID="txtName"></asp:Label>
+            <p><asp:RequiredFieldValidator ID="reqNameValidator" runat="server" ErrorMessage="*Required" ControlToValidate="txtName" class="validation" ValidationGroup="validatedControls" ></asp:RequiredFieldValidator>
+            <asp:TextBox ID="txtName" runat="server" placeholder="Name is required" class="style-input" TabIndex="1"></asp:TextBox>
+            </p>
+                <p><asp:Label ID="lblEmail" runat="server" Text="Email:" class="style-label" AssociatedControlID="txtEmail"></asp:Label>
+            <asp:RequiredFieldValidator ID="reqEmailValidator" runat="server" ErrorMessage="*Required" ControlToValidate="txtEmail" class="validation" ValidationGroup="validatedControls"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="regExprChkEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="*e.g. someone@example.com" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" class="validation" ValidationGroup="validatedControls"></asp:RegularExpressionValidator>
+            <asp:TextBox ID="txtEmail" runat="server" placeholder="Email Address is required" class="style-input" TabIndex="2"></asp:TextBox>
+            </p>
+                    <p><asp:Label ID="lblSubject" runat="server" Text="Subject:" class="style-label" AssociatedControlID="txtSubject"></asp:Label><asp:RequiredFieldValidator ID="reqSubjectValidator" runat="server" ErrorMessage="*Required" ControlToValidate="txtSubject" class="validation" ValidationGroup="validatedControls"></asp:RequiredFieldValidator>
+            <asp:TextBox ID="txtSubject" runat="server" placeholder="Subject is required" class="style-input" TabIndex="3"></asp:TextBox>
+            </p>
+                        <p><asp:Label ID="lblMessage" runat="server" Text="Message:" class="style-label" AssociatedControlID="txtMessage"></asp:Label><asp:RequiredFieldValidator ID="reqMessageValidator" runat="server" ErrorMessage="*Required" ControlToValidate="txtMessage" class="validation" ValidationGroup="validatedControls"></asp:RequiredFieldValidator>
+            <asp:TextBox ID="txtMessage" runat="server" placeholder="Message is required" class="style-input" TextMode="MultiLine" TabIndex="4"></asp:TextBox>
+            <asp:Button ID="btnSendEmail" runat="server" Text="Send" OnClick="btnSend_Clicks" title="Submit" class="style-button" ValidationGroup="validatedControls"  />
+            </p><span class="literal">
+                <asp:Literal ID="litResult" runat="server"></asp:Literal></span>	
+									  
+		
+				</div>
+		</div>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="GoogleMap" runat="server">
+</asp:Content>

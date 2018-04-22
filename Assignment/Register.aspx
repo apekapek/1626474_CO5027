@@ -3,10 +3,10 @@
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Header" runat="server">
-
+Register
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Content" runat="server">
-    <form id="form1" runat="server">
+    
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
         Username<asp:TextBox ID="txtRegUserName" runat="server"></asp:TextBox>
         <asp:RequiredFieldValidator ID="reqUsername" runat="server" ControlToValidate="txtRegUserName" ErrorMessage="please enter the username" Display="None"></asp:RequiredFieldValidator>
@@ -20,7 +20,7 @@
         <br />
         <br />
         <asp:Literal ID="litRegisterError" runat="server"></asp:Literal>
-</form>
+
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="GoogleMap" runat="server">
 </asp:Content>

@@ -10,61 +10,70 @@
 namespace Assignment {
     
     
-    public partial class WebForm1 {
+    public partial class Contact {
         
         /// <summary>
-        /// form1 control.
+        /// lblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lblName;
         
         /// <summary>
-        /// ValidationSummary1 control.
+        /// reqNameValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqNameValidator;
         
         /// <summary>
-        /// Label1 control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
         
         /// <summary>
-        /// EmailForUser control.
+        /// lblEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EmailForUser;
+        protected global::System.Web.UI.WebControls.Label lblEmail;
         
         /// <summary>
-        /// regValidEmail control.
+        /// reqEmailValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator regValidEmail;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqEmailValidator;
         
         /// <summary>
-        /// reqEmails control.
+        /// regExprChkEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqEmails;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regExprChkEmail;
+        
+        /// <summary>
+        /// txtEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
         /// lblSubject control.
@@ -76,6 +85,15 @@ namespace Assignment {
         protected global::System.Web.UI.WebControls.Label lblSubject;
         
         /// <summary>
+        /// reqSubjectValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqSubjectValidator;
+        
+        /// <summary>
         /// txtSubject control.
         /// </summary>
         /// <remarks>
@@ -85,40 +103,31 @@ namespace Assignment {
         protected global::System.Web.UI.WebControls.TextBox txtSubject;
         
         /// <summary>
-        /// reqSubjectField control.
+        /// lblMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqSubjectField;
+        protected global::System.Web.UI.WebControls.Label lblMessage;
         
         /// <summary>
-        /// lblBody control.
+        /// reqMessageValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBody;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqMessageValidator;
         
         /// <summary>
-        /// txtBody control.
+        /// txtMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBody;
-        
-        /// <summary>
-        /// reqBodyField control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqBodyField;
+        protected global::System.Web.UI.WebControls.TextBox txtMessage;
         
         /// <summary>
         /// btnSendEmail control.

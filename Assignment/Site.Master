@@ -13,6 +13,8 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <!--<link href="~/css/style.css" rel="stylesheet" type="text/css">-->
     <link href="~/admin/css/style.css" rel="stylesheet" type="text/css">
+ 
+
 
 
   
@@ -37,11 +39,11 @@
 				</label>
       <input type="checkbox" name="" id="open">
       <nav>
-        <a href="~/Default">Home</a>
-        <a href="#">Inspiration</a>
-        <a href="#">Articles</a>
-        <a href="#">My Account</a>
-        <a href="~/ContactUs">Contact</a>
+        <a href="/Default">Home</a>
+        <a href="/Product">Product</a>
+        <a href="/Register">Register</a>
+        <a href="/Login">Login</a>
+        <a href="/Contact">Contact</a>
       </nav>
     </div>
   </div>

@@ -117,7 +117,7 @@ nav > a {
 section {
     width: 100%;
     height: auto;
-    background-image: -webkit-linear-gradient(#80059e 0%, #550486 100%);
+   
 }
 
 .section-left,
@@ -153,17 +153,6 @@ section {
     font-size: 1em;
 }
 
-.learn-more {
-    display: table;
-    margin: 3em auto 0;
-    padding: 1em 6em;
-    cursor: pointer;
-    border-radius: 3px;
-    box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.8);
-    background: #eaaf00;
-    background-image: -webkit-linear-gradient(#eaaf00 0%, #d78100 100%);
-    font-size: 1.2em;
-}
 
     .learn-more:hover {
         background: #eaaf00;
@@ -340,4 +329,125 @@ section {
         display: block;
     }
 }
+/************************************************************************************
+Contact Page
+*************************************************************************************/
 
+
+#map {
+    width: 100%;
+    height: 100%;
+ 
+}
+
+/*         Content  Right Box           */
+
+
+.CtnRight {
+    padding: 10px 10px 20px 10px;
+    background-color: rgba(0,255,255,0.5);
+    width: 47%;
+    height: 510px;
+    float: left;
+    margin: 0 0 10px 0;
+    color: black;
+    overflow: auto;
+}
+/*------------------------------*/
+
+
+/*         Content Left Box        */
+
+
+
+.CtnLeft {
+	padding:10px 10px 20px 10px;
+	background-color:rgba(0,255,255,0.5);
+	width:47%;
+	height:510px;
+	float:right;
+	margin:0 0 10px 0;
+	color: black;
+	overflow:auto;
+
+}
+
+
+
+@media only screen and ( max-width: 62.5em ) /* 1000px */{
+	/*         Content Right Box           */
+	
+content2{
+	
+	width:100%;
+}
+
+
+.CtnRight {
+
+
+    width: 95%;
+    height: 500px;
+    display: inline-block;
+
+}
+
+/*------------------------------*/
+
+
+/*         Content Left Box        */
+
+
+
+.CtnLeft {
+	padding:10px 10px 20px 10px;
+	background-color:rgba(0,255,255,0.5);
+	width:100%;
+	height:500px;
+	float:right;
+	margin:0 0 20px 0;
+	color: black;
+	overflow:auto;
+
+}
+
+}
+
+@media only screen and ( max-width: 40em ) /* 640 */{
+	/*         Content Right Box           */
+
+
+	.CtnRight {
+	display:block;
+	padding:10px 10px 20px 10px;
+	background-color:rgba(0,255,255,0.5);
+	height:300px;
+	width:90%;
+	float:none;
+	margin:0 0 20px 0;
+	color: black;
+	overflow:auto;
+
+	}
+
+/*------------------------------*/
+
+
+/*         Content Left Box        */
+
+
+	
+	 .CtnLeft {
+		padding:10px 10px 20px 10px;
+		background-color:rgba(0,255,255,0.5);
+		width:90%;
+		height:auto;
+		float:none;
+		margin:0 0 20px 0;
+		color: black;
+		overflow:auto;
+	}
+
+
+
+}
