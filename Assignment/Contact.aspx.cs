@@ -21,7 +21,9 @@ namespace Assignment
 
             //create mail client and message with to and from address, and set message subject and body
             SmtpClient smtpClient = new SmtpClient();
+            smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
             MailMessage msg = new MailMessage("apekassignment@gmail.com", "apekassignment@gmail.com");
+            MailMessage msgToClient = new MailMessage();
 
 
             //settings sepcific to the mail service, e.g. server location, port number and that ssl is required
@@ -30,16 +32,32 @@ namespace Assignment
             smtpClient.EnableSsl = true;
 
             //create credentials - e.g. username and password for the account
-            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("apekassignment@gmail.com", "lola1lola");
+            smtpClient.UseDefaultCredentials = false;
+            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("apekassignment@gmail.com", "UAws4VyU!");
+            
             smtpClient.Credentials = credentials;
 
             msg.Subject = "Dear " + txtName.Text + ", thank you for your feedback!";
-            msg.Body = "Dear " + txtName.Text + "( " + txtEmail.Text + " )" + ". This is to notify you that we have received your message from our website: [" + txtSubject.Text + "], Message details: " + txtMessage.Text;
-            
+            msg.Body = "Dear " + txtName.Text + "( " + txtEmail.Text + " )"
+                + System.Environment.NewLine+". This is to notify you that we have received your message from our website:" 
+                + System.Environment.NewLine+" Message Subject:"+ System.Environment.NewLine+ txtSubject.Text  
+                + System.Environment.NewLine + " Message details: " + System.Environment.NewLine + txtMessage.Text;
+
+            msgToClient.From = new MailAddress(txtEmail.Text);
+            msgToClient.To.Add(new MailAddress(txtEmail.Text));
+
+            msgToClient.Subject = txtSubject.Text;
+            msgToClient.IsBodyHtml = true;
+            msgToClient.Subject = txtSubject.Text;
+            msgToClient.Body = "From " + txtName.Text + "( " + txtEmail.Text + " )"
+                + System.Environment.NewLine + " Message Subject:" + System.Environment.NewLine + txtSubject.Text
+                + System.Environment.NewLine + " Message details: " + System.Environment.NewLine + txtMessage.Text;
+
 
             try
             {
                 smtpClient.Send(msg);
+                smtpClient.Send(msgToClient);
                 litResult.Text =
                     "<p>Success, mail sent using SMTP with secure connection and credentials</p>";
                 txtName.Text = string.Empty;

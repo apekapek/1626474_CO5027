@@ -1,57 +1,30 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Assignment.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
-    Main Page
 </asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Header" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Content" runat="server">
+     <section id="first_content">
+        <h2>Product List</h2>
+        <asp:Repeater ID="rptrProducts" runat="server" DataSourceID="SqlDataSource1">
+            <HeaderTemplate><div></HeaderTemplate>
+            <ItemTemplate>
+                <div class="rptrProduct">
+                    <a href="<%# Eval ("ProductID", "Product.aspx?Id={0}") %>">
+                        <div>
+                            <asp:Image ID="displayProductImage" runat="server" Height="200px" ImageUrl='<%# Eval("ProductImage") %>' Width="200px" AlternateText='<%# Eval("ProductDesc") %>' />
 
-<asp:Content ID="Content3" ContentPlaceHolderID="Header" runat="server">
-    List of Item
+                        </div>
+                        <div><%# Eval ("ProductName") %></div>
+                        <div><asp:Label ID="lblProductPrice" runat="server" Text="$"></asp:Label><%# Eval ("ProductPrice") %></div>
+                        <div><asp:Label ID="lblProductQty" runat="server" Text="Qty: "></asp:Label><%# Eval ("ProductQuantity") %></div>
+                    </a>
+                </div>
+            </ItemTemplate>
+            <FooterTemplate></div></FooterTemplate>
+        </asp:Repeater>
+         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626474_co5027_asgConnectionString1 %>" SelectCommand="SELECT * FROM [tblProducts]"></asp:SqlDataSource>
+    </section>
 </asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="Content" runat="server">
-    <div id="wrap">
-	<div id="columns" class="columns_4">
-  <figure>
-    <img src="Image/Ballpoint%20pen%20Essentio%20Black%20Carbon%20gift%20box.jpg" />
-	<figcaption>Ballpoint pen Essentio Black Carbon gift box</figcaption>
-    <span class="price">$44</span>
-    <a class="button" href="#">Buy Now</a>
-	</figure>
-	
-	<figure>
-    <img src="Image/Ballpoint%20pen%20Essentio%20metal%20matt.jpg" />
-	<figcaption>Ballpoint pen Essentio metal matt</figcaption>
-    <span class="price">$44</span>
-    <a class="button" href="#">Buy Now</a>
-	</figure>
-	
-  <figure>
-     <img src="Image/Ballpoint%20pen%20Essentio%20metal%20shiny.jpg" />
-	<figcaption>Ballpoint pen Essentio metal shiny</figcaption>
-    <span class="price">$44</span>
-    <a class="button" href="#">Buy Now</a>
-	</figure>
-  
-	<figure>
-    <img src="Image/Ballpoint%20pen%20LOOM%20metallic%20grey.jpg" />
-	<figcaption>Ballpoint pen LOOM metallic grey</figcaption>
-    <span class="price">$44</span>
-    <a class="button" href="#">Buy Now</a>
-	</figure>
-	
-   <figure>
-    <img src="Image/Fountain%20pen%20Ondoro%20graphite%20black%20fine.jpg" />
-	<figcaption>Fountain pen Ondoro graphite black fine</figcaption>
-    <span class="price">$44</span>
-    <a class="button" href="#">Buy Now</a>
-	</figure>
-	
-   <figure>
-       <img src="Image/Fountain%20pen%20Ondoro%20smoked%20oak%20fine.jpg" />
-	<figcaption>Fountain pen Ondoro smoked oak fine</figcaption>
-     <span class="price">$44</span>
-     <a class="button" href="#">Buy Now</a>
-	</figure>
-  	
-</div>
-        </div>
+<asp:Content ID="Content4" ContentPlaceHolderID="GoogleMap" runat="server">
 </asp:Content>
-

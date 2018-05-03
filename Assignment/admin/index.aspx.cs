@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Microsoft.AspNet.Identity;
 
 namespace Assignment.admin
 {
@@ -15,15 +14,16 @@ namespace Assignment.admin
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            HttpContext.Current.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            Response.Redirect("~/Login.aspx");
-        }
+            FileUpload file = (FileUpload)FormView1.FindControl("FileUpload1") as FileUpload;
+            if (file.HasFile)
+            {
+                file.SaveAs(Server.MapPath("~/ProductImages/" + file.FileName));
+                Label saveProduct = (Label)FormView1.FindControl("Label1") as Label;
+                saveProduct.Text = "~/ProductImages/" + file.FileName;
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            }
         }
     }
 }

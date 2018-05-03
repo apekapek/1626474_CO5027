@@ -25,7 +25,7 @@
      <form id="form1" runat="server">
 				
 		 <div class="login">
-            <asp:LoginStatus ID="LoginStatus1" runat="server" />
+            <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" />
             <asp:LoginName ID="LoginName1" runat="server" />
         </div>
        <header class="clearfix">
@@ -39,11 +39,11 @@
 				</label>
       <input type="checkbox" name="" id="open">
       <nav>
-        <a href="/Default">Home</a>
-        <a href="/Product">Product</a>
-        <a href="/Register">Register</a>
-        <a href="/Login">Login</a>
-        <a href="/Contact">Contact</a>
+        <a href="Default">Home</a>
+        
+        <a href="Register" id="MenuUser" runat="server">Register</a>
+        <a href="Login">Login</a>
+        <a href="Contact">Contact</a>
       </nav>
     </div>
   </div>
@@ -74,12 +74,17 @@
         		<img src="http://jigsaw.w3.org/css-validator/images/vcss"
             	alt="Valid CSS!" class="valid" />
 			</a>
+
 	
 		
 			<a href="http://jigsaw.w3.org/css-validator/check/referer">
 				<img src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
 				alt="Valid CSS!" class="valid" />
 			</a>
+                <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a> 
+                |
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a> 
+                | <a href="admin/">Admin</a>
 		
 	</footer>
    </form>

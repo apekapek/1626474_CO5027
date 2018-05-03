@@ -13,15 +13,6 @@ namespace Assignment.admin {
     public partial class Edit1 {
         
         /// <summary>
-        /// CurrentImage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image CurrentImage;
-        
-        /// <summary>
         /// FormView1 control.
         /// </summary>
         /// <remarks>
@@ -40,22 +31,13 @@ namespace Assignment.admin {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource;
         
         /// <summary>
-        /// imageFileUploadControl control.
+        /// img_lit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload imageFileUploadControl;
-        
-        /// <summary>
-        /// Button2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Literal img_lit;
         
         /// <summary>
         /// Button1 control.

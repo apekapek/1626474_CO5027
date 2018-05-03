@@ -15,7 +15,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="login">
-            <asp:LoginStatus ID="LoginStatus1" runat="server" />
+            <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" />
             <asp:LoginName ID="LoginName1" runat="server" />
         </div>
        <header class="clearfix">
@@ -29,11 +29,10 @@
 				</label>
       <input type="checkbox" name="" id="open">
       <nav>
-        <a href="~/Default">Home</a>
-        <a href="#">Inspiration</a>
-        <a href="#">Articles</a>
-        <a href="#">My Account</a>
-        <a href="~/ContactUs">Contact</a>
+        
+        <a href="Index">index</a>
+        <a href="Edit">Edit</a>
+        
       </nav>
     </div>
   </div>

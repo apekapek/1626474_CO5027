@@ -79,14 +79,22 @@
     <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="PayPal, Version=1.9.1.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPal.1.9.1\lib\net451\PayPal.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -134,9 +142,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.ApplicationInsights">
       <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
     </Reference>
@@ -163,6 +168,7 @@
     <Content Include="admin\css\style.css" />
     <Content Include="admin\Edit.aspx" />
     <Content Include="admin\index.aspx" />
+    <Content Include="CompletedPage.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -182,17 +188,23 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="admin\Site2.Master" />
-    <None Include="Properties\PublishProfiles\Try.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="image\Ballpoint pen Essentio Black Carbon gift box.jpg" />
-    <Content Include="image\Ballpoint pen Essentio metal matt.jpg" />
-    <Content Include="image\Ballpoint pen Essentio metal shiny.jpg" />
-    <Content Include="image\Ballpoint pen LOOM metallic grey.jpg" />
-    <Content Include="image\Logo.png" />
-    <Content Include="image\Fountain pen Ondoro graphite black fine.jpg" />
-    <Content Include="image\Fountain pen Ondoro smoked oak fine.jpg" />
-    <Content Include="image\NEO Slim Ballpoint pen wiith Stylus Stainless Steel, Shiny.jpg" />
-    <Content Include="image\wist ballpoint pen AMBITION OpArt Water Lily.jpg" />
+    <Content Include="image\1.jpg" />
+    <Content Include="image\12.jpg" />
+    <Content Include="image\122.jpg" />
+    <Content Include="image\2.jpg" />
+    <Content Include="image\3.JPG" />
+    <Content Include="image\aaaaa.JPG" />
+    <Content Include="image\DDR3L.jpeg" />
+    <Content Include="image\Fountain pen Grip 2010 blue-light blue medium.JPG" />
+    <Content Include="image\Fountain pen Grip 2010 pink-orange medium.JPG" />
+    <Content Include="image\Fountain pen Grip 2010 turquoise medium.JPG" />
+    <Content Include="image\Fountain pen Grip 2011 black medium.JPG" />
+    <Content Include="image\Fountain pen Grip 2011 blue medium.JPG" />
+    <Content Include="image\Fountain pen Grip 2011 silver medium.JPG" />
+    <Content Include="image\Netcom Prolink Ad PCU USB Chargers_5 March 2016.jpg" />
+    <Content Include="image\unicloset.bn-20180408-0001.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Product.aspx" />
     <Content Include="Register.aspx" />
@@ -255,6 +267,13 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CompletedPage.aspx.cs">
+      <DependentUpon>CompletedPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompletedPage.aspx.designer.cs">
+      <DependentUpon>CompletedPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -313,6 +332,7 @@
   <ItemGroup>
     <Folder Include="admin\ProductImages\" />
     <Folder Include="App_Data\" />
+    <Folder Include="ProductImages\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -323,6 +343,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

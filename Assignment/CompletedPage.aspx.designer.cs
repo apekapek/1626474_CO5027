@@ -10,33 +10,24 @@
 namespace Assignment {
     
     
-    public partial class Product {
+    public partial class CompletedPage {
         
         /// <summary>
-        /// FormView1 control.
+        /// btnConfirmOrder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView FormView1;
+        protected global::System.Web.UI.WebControls.Button btnConfirmOrder;
         
         /// <summary>
-        /// SqlDataSource control.
+        /// litResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource;
-        
-        /// <summary>
-        /// purchase control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button purchase;
+        protected global::System.Web.UI.WebControls.Literal litResult;
     }
 }

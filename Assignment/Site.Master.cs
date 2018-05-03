@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Microsoft.AspNet.Identity;
 
 namespace Assignment
 {
@@ -11,7 +12,16 @@ namespace Assignment
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.User.IsInRole("Admin"))
+            {
+                MenuUser.Visible = false;
+            }
+        }
 
+        protected void LoginStatus1_LoggingOut(object sender, LoginCancelEventArgs e)
+        {
+            HttpContext.Current.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            Response.Redirect("Login.aspx");
         }
     }
 }

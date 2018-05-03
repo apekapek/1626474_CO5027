@@ -61,17 +61,17 @@ header {
     .header-right span:hover {
         background: rgba(255, 255, 255, 0.6);
     }
-
-    .header-right span:before,
-    .header-right span:after {
-        content: "";
-        position: absolute;
-        width: 2em;
-        height: 0.5em;
-        top: 4px;
-        left: 0;
-        background: black;
-    }
+    
+.header-right span:before,
+.header-right span:after {
+    content: "";
+    position: absolute;
+    width: 2em;
+    height: 0.5em;
+    top: 4px;
+    left: 0;
+    background: black;
+}
 
     .header-right span:after {
         top: 14px;
@@ -232,32 +232,7 @@ section {
         text-align: center;
     }
 
-    .section-left,
-    .section-right {
-        width: 100%;
-    }
-
-    .section-left {
-        text-align: center;
-        padding: 2em 0;
-    }
-
-    .section-right {
-        padding: 1em 0 2em;
-    }
-
-    .section-title {
-        font-size: 3em;
-        margin-bottom: 0.2em;
-    }
-
-    .section-tagline {
-        font-size: 1.3em;
-    }
-
-    .learn-more {
-        margin: 0 auto;
-    }
+   
 }
 
 /* Landscape phones and down */
@@ -296,34 +271,7 @@ section {
         text-align: center;
     }
 
-    .section-left,
-    .section-right {
-        width: 100%;
-    }
-
-    .section-left {
-        text-align: center;
-        padding: 1em 0;
-    }
-
-    .section-right {
-        text-align: center;
-        padding: 1em 0 2em;
-    }
-
-    .section-title {
-        font-size: 2.4em;
-        margin-bottom: 0;
-    }
-
-    .section-tagline {
-        font-size: 1em;
-    }
-
-    .learn-more {
-        display: table;
-        margin: 0 auto;
-    }
+    
 
     .hidden-desktop {
         display: block;
@@ -451,3 +399,18 @@ content2{
 
 
 }
+
+.rptrProduct {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    vertical-align: top;
+    border: 2px solid #ffe2ff;
+    padding: 12px;
+}
+
+    .rptrProduct a {
+        color: #ffffff;
+        text-decoration: none;
+        text-align: center;
+    }
